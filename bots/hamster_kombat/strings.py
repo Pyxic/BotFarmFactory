@@ -36,6 +36,9 @@ MSG_SYNC = "Обновление данных"
 MSG_TASK_COMPLETED = "Задание выполнено. Награда: {reward}"
 MSG_TASK_NOT_COMPLETED = "Задание не выполнено"
 MSG_BUY_SKIN = "Скин {skin_name} куплен"
+MSG_BOOST_AVAILABLE = "Доступен Boost: {boostid}"
+MSG_BOOST = "Применил Boost: {boostype}"
+MSG_TAP_SIM = "Симуляция тапов Boost: {sec} сек."
 
 
 MSG_PROMO_UPDATE_ERROR = "Ошибка обновления статуса промкодов"
@@ -76,4 +79,7 @@ PROMO_TOKENS = {
     'c4480ac7-e178-4973-8061-9ed5b2e17954': '82647f43-3f87-402d-88dd-09a90025313f', # TRAIN
     'dc128d28-c45b-411c-98ff-ac7726fbaea4': '8d1cc2ad-e097-4b86-90ef-7a27e19fb833', # MERGE
     '61308365-9d16-4040-8bb0-2f4a4c69074c': '61308365-9d16-4040-8bb0-2f4a4c69074c', # TWERK
+    '2aaf5aee-2cbc-47ec-8a3f-0962cc14bc71': '2aaf5aee-2cbc-47ec-8a3f-0962cc14bc71', # POLY
+    'ef319a80-949a-492e-8ee0-424fb5fc20a6': 'ef319a80-949a-492e-8ee0-424fb5fc20a6', # TRIM
+    '8814a785-97fb-4177-9193-ca4180ff9da8': '8814a785-97fb-4177-9193-ca4180ff9da8', # RACE
 }
