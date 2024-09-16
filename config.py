@@ -12,6 +12,7 @@ TELEGRAM_AUTH = dict(
 
 DEBUG = True
 RETRY_ATTEMPTS = 3
+SLEEP_BETWEEN_START = [10, 180]
 
 ENABLED_BOTS = [
     # Пустой список = все боты включены
@@ -24,7 +25,7 @@ DISABLED_BOTS = [
 
 SLEEP_AT_NIGHT = False  # При True ночью фарминг не производится
 NIGHT_HOURS = (0, 7)  # Диапазон времени, когда у фермы тихий час
-MULTITHREAD = True  # При True на каждый аккаунт будет отдельный поток
+MULTITHREAD = False  # При True на каждый аккаунт будет отдельный поток
 
 try:
     from config_local import *

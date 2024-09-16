@@ -319,13 +319,13 @@ class BotFarmer(BaseFarmer):
         self.update_tasks()
         for task in self.tasks:
             task_id = task['id']
-            reward = task['rewardCoins']
+            reward = task.get('rewardCoins', 0)
             is_completed = task['isCompleted']
 
             if not task_id.startswith('hamster_youtube'):
                 continue
 
-            if reward > 0:
+            if not is_completed:
                 sleep(random() + choice(range(5, 10)))
                 data = {'taskId': task_id}
                 response = self.post(URL_CHECK_TASK, json=data)
@@ -397,7 +397,7 @@ class BotFarmer(BaseFarmer):
         if FEATURES.get('taps', True):
             self.tap()
         self.daily_reward()
-        # self.make_tasks()
+        self.make_tasks()
         if FEATURES.get('buy_upgrades', True):
             self.buy_upgrades(FEATURES.get('buy_decision_method', 'payback'))
             self.claim_combo_reward()
@@ -407,10 +407,4 @@ class BotFarmer(BaseFarmer):
             self.apply_promo()
         if self.is_taps_boost_available:
             self.boost(BOOST_ENERGY)
-            self.sync()
-            tap_sim_sec = choice(range(FEATURES.get('tap_wait'[0], 110), FEATURES.get('tap_wait'[1], 130)))
-            self.log(MSG_TAP_SIM.format(sec = tap_sim_sec))
-            sleep(tap_sim_sec)
-            self.tap()
-
         self.log(" ".join(f"{k}: {v} |" for k, v in self.stats.items()))
