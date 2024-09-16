@@ -60,7 +60,6 @@ class BotFarmer(BaseFarmer):
             "user": user
         }
         return data
-        
 
     def authenticate(self, *args, **kwargs):
         auth_data = self.initiator.get_auth_data(**self.initialization_data)

@@ -181,7 +181,7 @@ class BotFarmer(BaseFarmer):
 
     def daily_reward(self):
         """ Получение ежедневной награды """
-        data = {"taskId":"streak_days"}
+        data = {"taskId": "streak_days_special"}
         if not self.task_checked_at or time() - self.task_checked_at >= 60 * 60:
             self.post(URL_CHECK_TASK, json=data)
             self.task_checked_at = time()
@@ -397,7 +397,7 @@ class BotFarmer(BaseFarmer):
         if FEATURES.get('taps', True):
             self.tap()
         self.daily_reward()
-        self.make_tasks()
+        # self.make_tasks()
         if FEATURES.get('buy_upgrades', True):
             self.buy_upgrades(FEATURES.get('buy_decision_method', 'payback'))
             self.claim_combo_reward()

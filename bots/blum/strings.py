@@ -1,7 +1,7 @@
 URL_WEBAPP_INIT = "https://telegram.blum.codes/"
 URL_ME = "https://gateway.blum.codes/v1/user/me"
 URL_NOW = "https://game-domain.blum.codes/api/v1/time/now"
-URL_AUTH = "https://gateway.blum.codes/v1/auth/provider/PROVIDER_TELEGRAM_MINI_APP"
+URL_AUTH = "https://user-domain.blum.codes/api/v1/auth/provider/PROVIDER_TELEGRAM_MINI_APP"
 URL_REFRESH_TOKEN = "https://gateway.blum.codes/v1/auth/refresh"
 URL_BALANCE = "https://game-domain.blum.codes/api/v1/user/balance"
 URL_TASKS = "https://game-domain.blum.codes/api/v1/tasks" 

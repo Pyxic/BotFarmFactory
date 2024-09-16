@@ -18,7 +18,7 @@
 
 
 FEATURES = {
-    "buy_upgrades": True,
+    "buy_upgrades": False,
     "buy_decision_method": "payback",
     "taps": True,
     "max_upgrade_payback": None,
