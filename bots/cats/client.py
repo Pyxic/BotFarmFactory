@@ -109,10 +109,11 @@ class BotFarmer(BaseFarmer):
 
                 if attempt_time_str is None:
                     self.log("Нет информации о последней попытке загрузки аватара.")
-                    return None
+                    time_difference = 25 * 3600
+                else:
 
-                attempt_time = datetime.fromisoformat(attempt_time_str.replace('Z', '+00:00'))
-                time_difference = (current_time_utc - attempt_time).total_seconds()
+                    attempt_time = datetime.fromisoformat(attempt_time_str.replace('Z', '+00:00'))
+                    time_difference = (current_time_utc - attempt_time).total_seconds()
 
                 if time_difference >= 24 * 3600:
                     img_folder = 'bots/cats/img'
